@@ -1,7 +1,17 @@
-'use strict';
-
 function collect_all_even(collection) {
-  //在这里写入代码
+    var evenCollection = buildEvenCollection(collection);
+    return evenCollection;
+}
+
+function buildEvenCollection(collection) {
+    var evenCollection =[];
+    collection.forEach(function (element) {
+        if (element%2 === 0) {
+            evenCollection.push(element);
+        }
+    });
+    return evenCollection;
 }
 
 module.exports = collect_all_even;
+
